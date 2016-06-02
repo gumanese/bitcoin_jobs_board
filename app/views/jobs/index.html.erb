@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remote jobs in startups, technology and digital - bitcoinjobs.me</title>
+  <link data-turbolinks-track="true" href="style.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/application-89ba9fe2e3886063bcfa181884a62600.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="about">
+    <div class="logo">
+  <h1>
+    <%= image_tag("logo.svg", :alt => "Tech Jobs In London") %>
+  </h1>
+  </div>
+  
+  <h2>The best technology jobs at startups and digital agencies for bitcoin.</h2>
+  
+  <div class="eligibility">
+    <h3>Eligibility</h3>
+    
+    <ul>
+      <li>The job or the company must be based in London</li>
+      <li>The job or the company's main focus should be on digital</li>
+      <li>Unpaid internships are unfair so I'm not allowing them on the site</li>
+      <li>You work at a nice company!</li>
+    </ul>
+  </div>
+
+  <div class="button">
+  	<a href="#">Donate to support the project</a>
+  </div>
+  
+  <p>100% free and no bullshit guaranteed! To get your advert posted, just tweet at <a href="http://www.twitter.com/gumanese">@gumanese</a> with details and I'll add you.</p>
+    
+  <p>Last updated about <%= time_ago_in_words(Time.now) %> ago</p>
+
+</div>
+
+<div class="jobs">
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<% @jobs.each do |job| %>
+  <div class="job">
+    <blockquote class="twitter-tweet"><a href=“<%= job.url %>”></a></blockquote>
+  </div>
+<% end %>
+
+ <p><%= paginate @jobs %></p>
+
+
+
+  </div>
+
+<script src="superhi.js"></script></body>
+</html>
+
+
+

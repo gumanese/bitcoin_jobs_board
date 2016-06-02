@@ -43,5 +43,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+
+  gem 'simple_form'
+  gem 'kaminari'
+  gem "administrate", "~> 0.2.1"
 end
 
